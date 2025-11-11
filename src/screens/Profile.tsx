@@ -1,10 +1,11 @@
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, View, Text, Image, ScrollView } from "react-native";
 import { theme } from "../Theme/Theme";
 import { Feather } from "@expo/vector-icons";
 
 
 export function ProfilePage() {
     return (
+
         <View style={styles.mainContainer}>
             <View style={styles.aboutContainerName}>
                 <Text style={styles.aboutName}>About </Text>
@@ -29,6 +30,30 @@ export function ProfilePage() {
                 <Text style={styles.icons}>🎮Gaming</Text>
                 <Text style={styles.icons}>💤Sleep</Text>
                 <Text style={styles.icons}>🧑‍💻Code</Text>
+            </View>
+            <View style={styles.formationCard}>
+                <View style={styles.cardTitle}>
+                    <Text style={styles.formationTitle}>High School</Text>
+                    <Text style={styles.yearFomation}>2023 - 2025</Text>
+                </View>
+                <Text style={styles.formationText}>IFRO Campus Vilhena</Text>
+                <Text style={styles.formationText}>Vihena-RO , Brazil</Text>
+                <View style={styles.lineVerticalFotmation}></View>
+                <View style={styles.cardTitle}>
+                    <Text style={styles.formationTitle}>Courses</Text>
+                    <Text style={styles.yearFomation}>2023 - 2025</Text>
+                </View>
+                <Text style={styles.formationText}>From Curso em Video and others</Text>
+                <Text style={styles.courses}>• JavaScript</Text>
+                <Text style={styles.courses}>• Python</Text>
+                <Text style={styles.courses}>• React-native</Text>
+                <Text style={styles.courses}>• Back-end</Text>
+                <Text style={styles.courses}>• NodeJS</Text>
+                <View style={styles.lineVerticalFotmation}></View>
+                <View style={styles.cardTitle}>
+                    <Text style={styles.formationTitle}>Graduation</Text>
+                    <Text style={styles.yearFomation}>???? - ????</Text>
+                </View>
             </View>
         </View>
     );
@@ -58,6 +83,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         justifyContent: 'center',
         backgroundColor: theme.colors.tabBarBackgroundColor,
+        
     },
     aboutText: {
         fontFamily: "JetBrainsMono_400Regular",
@@ -78,20 +104,20 @@ const styles = StyleSheet.create({
         fontFamily: "JetBrainsMono_700Bold",
         color: theme.colors.tabBarActiveColor,
     },
-    interestContainer: { 
-        paddingBottom: 10,
-        paddingTop: 10,
+    interestContainer: {
         width: '97%',
-        marginTop: 20,
-        paddingLeft: 12, 
+        marginTop: 30,
+        paddingTop: 10,
+        paddingLeft: 12,
         paddingRight: 12,
         borderRadius: 12,
+        paddingBottom: 10,
         alignSelf: 'center',
         flexDirection: 'row',
         justifyContent: 'space-between',
         backgroundColor: theme.colors.tabBarBackgroundColor,
     },
-    interestedText: { 
+    interestedText: {
         alignSelf: 'center',
         color: theme.colors.justWhite,
         fontSize: theme.font.size.text,
@@ -106,11 +132,63 @@ const styles = StyleSheet.create({
         backgroundColor: theme.colors.primary,
         fontFamily: "JetBrainsMono_400Regular",
     },
-    lineVertical: { 
+    lineVertical: {
         width: 2,
         height: 30,
         borderRadius: 40,
         alignSelf: 'center',
-        backgroundColor: theme.colors.tabBarInactiveColor,
+        backgroundColor: theme.colors.lineColor,
+    },
+    formationCard: {
+        padding: 16,
+        width: '97%',
+        marginTop: 30,
+        borderRadius: 12,
+        alignSelf: 'center',
+        backgroundColor: theme.colors.tabBarBackgroundColor,
+    },
+    formationTitle: {
+        color: theme.colors.justWhite,
+        fontSize: theme.font.size.title,
+        fontFamily: "JetBrainsMono_700Bold",
+    },
+    cardTitle: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    yearFomation: {
+        width: 100,
+        paddingTop: 6,
+        borderRadius: 12,
+        paddingBottom: 6,
+        textAlign: 'center',
+        alignSelf: 'center',
+        justifyContent: 'flex-end',
+        backgroundColor: theme.colors.primary,
+        color: theme.colors.tabBarInactiveColor,
+
+    },
+    formationText: {
+        marginTop: 5,
+        fontSize: theme.font.size.text,
+        fontFamily: "JetBrainsMono_400Regular",
+        color: theme.colors.tabBarInactiveColor,
+
+    },
+    lineVerticalFotmation: {
+        height: 2,
+        width: '100%',
+        marginTop: 15,
+        marginBottom: 15,
+        borderRadius: 40,
+        alignSelf: 'center',
+        backgroundColor: theme.colors.lineColor,
+    },
+    courses: {
+        marginTop: 6,
+        paddingLeft: 12,
+        color: theme.colors.justWhite,
+        fontSize: theme.font.size.text,
+        fontFamily: "JetBrainsMono_400Regular",
     }
 })
