@@ -1,71 +1,93 @@
 import { StyleSheet, View, Text, Image, ScrollView } from "react-native";
 import { theme } from "../Theme/Theme";
-import { Feather } from "@expo/vector-icons";
+import { Feather, FontAwesome5, Ionicons } from "@expo/vector-icons";
 
 
 export function ProfilePage() {
     return (
+        <ScrollView
+            contentContainerStyle={{ paddingBottom: 40 }}
+        >
 
-        <View style={styles.mainContainer}>
-            <View style={styles.aboutContainerName}>
-                <Text style={styles.aboutName}>About </Text>
-                <Text style={styles.aboutNameColor}>Me!</Text>
-            </View>
-            <View style={styles.cardContainer}>
-                <Image source={require('../images/caco.webp')}
-                    style={styles.imageContainer}
-                    resizeMode="contain"
-                />
-                <View style={styles.textAboutContainer}>
-                    <Text style={styles.aboutText}>
-                        Hi, my name is Vitor Capelleto, I've been studying programming for about 2 years, focusing on front-end and back-end.
-                    </Text>
+            <View style={styles.mainContainer}>
+                <View style={styles.aboutContainerName}>
+                    <Text style={styles.aboutName}>About </Text>
+                    <Text style={styles.aboutNameColor}>Me!</Text>
                 </View>
-            </View>
-            <View style={styles.interestContainer}>
-                <Text style={styles.interestedText}>interested</Text>
-                <View style={styles.lineVertical}>
+                <View style={styles.cardContainer}>
+                    <Image source={require('../images/caco.webp')}
+                        style={styles.imageContainer}
+                        resizeMode="contain"
+                    />
+                    <View style={styles.textAboutContainer}>
+                        <Text style={styles.aboutText}>
+                            Hi, my name is Vitor Capelleto, I've been studying programming for about 2 years, focusing on front-end and back-end.
+                        </Text>
+                    </View>
+                </View>
+                <View style={styles.interestContainer}>
+                    <Text style={styles.interestedText}>interested</Text>
+                    <View style={styles.lineVertical}>
 
+                    </View>
+                    <Text style={styles.icons}>🎮Gaming</Text>
+                    <Text style={styles.icons}>💤Sleep</Text>
+                    <Text style={styles.icons}>🧑‍💻Code</Text>
                 </View>
-                <Text style={styles.icons}>🎮Gaming</Text>
-                <Text style={styles.icons}>💤Sleep</Text>
-                <Text style={styles.icons}>🧑‍💻Code</Text>
+                <View style={styles.formationCard}>
+                    <View style={styles.cardTitle}>
+                        <Text style={styles.formationTitle}>High School</Text>
+                        <Text style={styles.yearFomation}>2023 - now</Text>
+                    </View>
+                    <Text style={styles.formationText}>IFRO Campus Vilhena</Text>
+                    <Text style={styles.formationText}>Vihena-RO , Brazil</Text>
+                    <View style={styles.lineVerticalFotmation}></View>
+                    <View style={styles.cardTitle}>
+                        <Text style={styles.formationTitle}>Courses</Text>
+                        <Text style={styles.yearFomation}>2023 - now</Text>
+                    </View>
+                    <Text style={styles.formationText}>From Curso em Video and others</Text>
+                    <Text style={styles.courses}>JavaScript</Text>
+                    <Text style={styles.courses}>Python</Text>
+                    <Text style={styles.courses}>React-native</Text>
+                    <Text style={styles.courses}>Back-end</Text>
+                    <Text style={styles.courses}>NodeJS</Text>
+                    <View style={styles.lineVerticalFotmation}></View>
+                    <View style={styles.cardTitle}>
+                        <Text style={styles.formationTitle}>Graduation</Text>
+                        <Text style={styles.yearFomation}>???? - ????</Text>
+                    </View>
+                    <Text style={styles.formationText}>I don't have an academic background yet.</Text>
+                </View>
+                <View style={styles.interestContainer}>
+                    <Text style={styles.interestedText}>technologies</Text>
+                    <View style={styles.lineVertical} />
+                    <FontAwesome5 name="js" style={styles.iconsCode} size={30} color="#F7DF1E" />
+
+                    <FontAwesome5 name="node-js" style={styles.iconsCode} size={30} color="#68A063" />
+
+                    <Ionicons name="logo-react" style={styles.iconsCode} size={30} color="#61DAFB" />
+
+                    <FontAwesome5 name="python" style={styles.iconsCode} size={30} color="#68A063" />
+                </View>
+                <View style={styles.rights}>
+                    <Text style={styles.textRegister}>{'\u00A9'} 2025 - Diretos do site reservado</Text>
+                    <View style={styles.containerRights}>
+                        <Text style={styles.regOneColor}>made by </Text>
+                        <Text style={styles.regTwoColor}>Vitor G. Capelleto</Text>
+                    </View>
+                </View>
             </View>
-            <View style={styles.formationCard}>
-                <View style={styles.cardTitle}>
-                    <Text style={styles.formationTitle}>High School</Text>
-                    <Text style={styles.yearFomation}>2023 - 2025</Text>
-                </View>
-                <Text style={styles.formationText}>IFRO Campus Vilhena</Text>
-                <Text style={styles.formationText}>Vihena-RO , Brazil</Text>
-                <View style={styles.lineVerticalFotmation}></View>
-                <View style={styles.cardTitle}>
-                    <Text style={styles.formationTitle}>Courses</Text>
-                    <Text style={styles.yearFomation}>2023 - 2025</Text>
-                </View>
-                <Text style={styles.formationText}>From Curso em Video and others</Text>
-                <Text style={styles.courses}>• JavaScript</Text>
-                <Text style={styles.courses}>• Python</Text>
-                <Text style={styles.courses}>• React-native</Text>
-                <Text style={styles.courses}>• Back-end</Text>
-                <Text style={styles.courses}>• NodeJS</Text>
-                <View style={styles.lineVerticalFotmation}></View>
-                <View style={styles.cardTitle}>
-                    <Text style={styles.formationTitle}>Graduation</Text>
-                    <Text style={styles.yearFomation}>???? - ????</Text>
-                </View>
-            </View>
-        </View>
+        </ScrollView>
     );
 }
 
 const styles = StyleSheet.create({
     mainContainer: {
-        flex: 1,
         backgroundColor: theme.colors.primary,
     },
     cardContainer: {
-        marginTop: 40,
+        marginTop: 30,
         alignSelf: 'center',
         flexDirection: 'row',
 
@@ -83,7 +105,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         justifyContent: 'center',
         backgroundColor: theme.colors.tabBarBackgroundColor,
-        
+
     },
     aboutText: {
         fontFamily: "JetBrainsMono_400Regular",
@@ -132,8 +154,12 @@ const styles = StyleSheet.create({
         backgroundColor: theme.colors.primary,
         fontFamily: "JetBrainsMono_400Regular",
     },
+    iconsCode: {
+        alignSelf: 'center',
+        color: theme.colors.tabBarInactiveColor,
+    },
     lineVertical: {
-        width: 2,
+        width: 1,
         height: 30,
         borderRadius: 40,
         alignSelf: 'center',
@@ -157,9 +183,9 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     yearFomation: {
-        width: 100,
+        width: 105,
         paddingTop: 6,
-        borderRadius: 12,
+        borderRadius: 6,
         paddingBottom: 6,
         textAlign: 'center',
         alignSelf: 'center',
@@ -169,26 +195,54 @@ const styles = StyleSheet.create({
 
     },
     formationText: {
-        marginTop: 5,
+        marginTop: 6,
         fontSize: theme.font.size.text,
         fontFamily: "JetBrainsMono_400Regular",
         color: theme.colors.tabBarInactiveColor,
 
     },
     lineVerticalFotmation: {
-        height: 2,
+        height: 1,
         width: '100%',
-        marginTop: 15,
-        marginBottom: 15,
+        marginTop: 20,
+        marginBottom: 20,
         borderRadius: 40,
         alignSelf: 'center',
         backgroundColor: theme.colors.lineColor,
     },
     courses: {
-        marginTop: 6,
-        paddingLeft: 12,
+        width: 140,
+        padding: 8,
+        marginTop: 12,
+        borderRadius: 8,
         color: theme.colors.justWhite,
         fontSize: theme.font.size.text,
+        backgroundColor: theme.colors.primary,
+        fontFamily: "JetBrainsMono_400Regular_Italic",
+    },
+    rights: {
+        marginTop: 50,
+        marginBottom: 80,
+        alignSelf: 'center',
+    },
+    textRegister: {
+        color: theme.colors.justWhite,
+        fontSize: theme.font.size.text,
+        fontFamily: "JetBrainsMono_400Regular",
+    },
+    containerRights: {
+        alignSelf: 'center',
+        flexDirection: 'row',
+    },
+    regOneColor: {
+        color: theme.colors.justWhite,
+        fontSize: theme.font.size.text,
+        fontFamily: "JetBrainsMono_400Regular",
+
+    },
+    regTwoColor: {
+        fontSize: theme.font.size.text,
+        color: theme.colors.tabBarActiveColor,
         fontFamily: "JetBrainsMono_400Regular",
     }
 })

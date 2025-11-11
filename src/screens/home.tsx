@@ -28,11 +28,11 @@ export function HomePage() {
         </Text>
       </TouchableOpacity>
       <View style={styles.rights}>
-            <Text style={styles.textRegister}>{'\u00A9'} 2025 - Diretos do site reservado</Text>
-            <View style={styles.containerRights}>
-                <Text style={styles.regOneColor}>made by </Text>
-                <Text style={styles.regTwoColor}>Vitor G. Capelleto</Text>
-            </View>
+        <Text style={styles.textRegister}>{'\u00A9'} 2025 - Diretos do site reservado</Text>
+        <View style={styles.containerRights}>
+          <Text style={styles.regOneColor}>made by </Text>
+          <Text style={styles.regTwoColor}>Vitor G. Capelleto</Text>
+        </View>
       </View>
     </View>
   );
@@ -93,30 +93,30 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     textAlign: "center",
     color: theme.colors.justWhite,
-    fontSize: theme.font.size.ampliedText, 
+    fontSize: theme.font.size.ampliedText,
     fontFamily: "JetBrainsMono_400Regular",
   },
-  rights: { 
+  rights: {
     bottom: '12%',
     alignSelf: 'center',
     position: 'absolute',
-},
-textRegister: { 
+  },
+  textRegister: {
     color: theme.colors.justWhite,
-    fontSize: theme.font.size.text, 
+    fontSize: theme.font.size.text,
     fontFamily: "JetBrainsMono_400Regular",
-},
-containerRights: { 
+  },
+  containerRights: {
     alignSelf: 'center',
     flexDirection: 'row',
-},
-regOneColor: { 
+  },
+  regOneColor: {
     color: theme.colors.justWhite,
-    fontSize: theme.font.size.text, 
+    fontSize: theme.font.size.text,
     fontFamily: "JetBrainsMono_400Regular",
-    
-},
-regTwoColor: { 
+
+  },
+  regTwoColor: {
     fontSize: theme.font.size.text,
     color: theme.colors.tabBarActiveColor,
     fontFamily: "JetBrainsMono_400Regular",
