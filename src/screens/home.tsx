@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     fontFamily: "JetBrainsMono_400Regular",
   },
   rights: {
-    bottom: '12%',
+    bottom: '13.2%',
     alignSelf: 'center',
     position: 'absolute',
   },
