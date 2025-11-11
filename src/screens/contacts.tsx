@@ -23,7 +23,7 @@ export function ContactsPage() {
             <View style={styles.container}>
                 <TextInput
                     style={styles.input}
-                    placeholder="Assunto"
+                    placeholder="Email"
                     placeholderTextColor={theme.colors.tabBarInactiveColor}
                     value={emailSubject}
                     onChangeText={setEmailSubject}
