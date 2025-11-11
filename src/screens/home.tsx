@@ -11,7 +11,7 @@ export function HomePage() {
       />
 
       <View style={styles.containerName}>
-        <Text style={styles.name}>{"<Hello, I'm "}</Text>
+        <Text style={styles.name}>{"<Hello 👋, I'm "}</Text>
         <Text style={styles.nameColor}>{"Vitor Capelleto/>"}</Text>
       </View>
 
